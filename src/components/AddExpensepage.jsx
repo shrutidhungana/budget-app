@@ -1,11 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
+import ExpenseForm from './ExpenseForm'
 
 const AddExpensepage = () => {
   return (
       <div>
-          <Link to ="/"> Go home</Link>
-          AddExpensepage
+      <h1>
+        Add Expense
+      </h1> 
+       <ExpenseForm />
       </div>
   )
 }
