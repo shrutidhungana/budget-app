@@ -12,7 +12,8 @@ class ExpenseForm extends Component{
         note: '',
         amount: '',
         createdAt: now,
-        calendarFocused: false
+        calendarFocused: false,
+        error: ''
         
 
     };
@@ -46,11 +47,23 @@ class ExpenseForm extends Component{
 
     onSubmit = (e) => {
         e.preventDefault();
+        if (!this.state.description || !this.state.amount) {
+            this.setState(() => ({ error: 'Please provide description and amount.' }));
+          } else {
+            this.setState(() => ({ error: '' }));
+            this.props.onSubmit({
+                description: this.state.description,
+                amount: parseFloat(this.state.amount, 10) * 100,
+                createdAt: this.state.createdAt.valueOf(),
+                note: this.state.note
+            })
+          }
     }
 
     render() {
         return (
             <div>
+                {this.state.error && <p>{this.state.error}</p>}
                 <form onSubmit = {this.onSubmit}>
                     <input
                         type="text"

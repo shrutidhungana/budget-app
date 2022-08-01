@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import AddExpensepage from '../components/AddExpensepage'
 import EditExpensepage from '../components/EditExpensepage'
 import ExpenseDashboardpage from '../components/ExpenseDashboardpage'
@@ -11,12 +11,12 @@ const AppRouter = () => {
     <Router>
       <div>
         <Header />
-      <Routes>
-        <Route exact path="/" element={<ExpenseDashboardpage />} />
-        <Route  path="/Edit" element={<EditExpensepage />} />
-        <Route path="/Add" element={<AddExpensepage />} />
-        <Route  path="*" element={<NotFoundPage/> }/>
-        </Routes>
+      <Switch>
+        <Route exact path="/" component ={ExpenseDashboardpage } />
+        <Route  path="/Edit" component ={EditExpensepage} />
+        <Route path="/Add" component = {AddExpensepage } />
+        <Route   component ={NotFoundPage }/>
+        </Switch>
         </div>
     </Router>
   )
