@@ -2,7 +2,7 @@ import React from 'react'
 
 import 'normalize.css/normalize.css';
 import './Styles/styles.scss'
-import AppRouter from './components/Routes/AppRouter';
+import AppRouter from './Routes/AppRouter';
 
 const App = () => {
   
