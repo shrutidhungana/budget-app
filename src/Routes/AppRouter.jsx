@@ -1,10 +1,10 @@
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import AddExpensepage from '../components/Expense/AddExpensepage'
-import EditExpensepage from '../components/Expense/EditExpensepage'
-import ExpenseDashboardpage from '../components/Expense/ExpenseDashboardpage'
-import Header from '../components/Expense/Header'
-import NotFoundPage from '../components/Expense/NotFoundPage'
+import AddExpensepage from '../components/AddExpensepage'
+import EditExpensepage from '../components/EditExpensepage'
+import ExpenseDashboardpage from '../components/ExpenseDashboardpage'
+import Header from '../components/Header'
+import NotFoundPage from '../components/NotFoundPage'
 
 const AppRouter = () => {
   return (
