@@ -3,7 +3,7 @@ import { createStore,combineReducers } from 'redux'
 import expensesReducer from '../Reducers/expenses'
 import filtersReducer from '../Reducers/filters'
 
-export default () => {
+const store = () => {
     const store = createStore(
         combineReducers({
             expenses: expensesReducer,
@@ -13,3 +13,5 @@ export default () => {
 
     return store;
 };
+
+export default store
