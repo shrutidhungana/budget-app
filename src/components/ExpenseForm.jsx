@@ -4,7 +4,7 @@ import moment from 'moment';
  import 'react-dates/lib/css/_datepicker.css';
 
 
-const now = moment()
+
 
 class ExpenseForm extends Component{
     constructor(props) {
@@ -14,7 +14,7 @@ class ExpenseForm extends Component{
             description: props.expense ? props.expense.description : '',
             note: props.expense ? props.expense.note : '',
             amount: props.expense ? (props.expense.amount /100).toString() :'',
-            createdAt: props.expense ?moment(props.expense.createdAt): now,
+            createdAt: props.expense ?moment(props.expense.createdAt): moment(),
             calendarFocused: false,
             error: '' 
         };
