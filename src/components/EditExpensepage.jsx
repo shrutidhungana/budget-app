@@ -1,11 +1,14 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-const EditExpensepage = () => {
+const EditExpensepage = (props) => {
   return (
       <div>
-          EditExpensepage
+          EditExpensepage with the id of {props.match.params.id}
       </div>
   )
 }
 
-export default EditExpensepage
+
+
+export default connect() (EditExpensepage)
