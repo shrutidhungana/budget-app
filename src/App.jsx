@@ -12,7 +12,7 @@ import { Provider } from 'react-redux';
 const App = () => {
   const store = configureStore();
 
-  store.dispatch(addExpense({ description: 'Water bill', amount: 40500 }))
+ store.dispatch(addExpense({ description: 'Water bill', amount: 40500 }))
   store.dispatch(addExpense({ description: 'Gas bill', createdAt: 500 }))
   store.dispatch(addExpense({ description: 'Rent bill', amount: 109500 }))
 
@@ -26,15 +26,15 @@ const App = () => {
   const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
   console.log(visibleExpenses);
 
-  const jsx = (
+const jsx = (
     <Provider store = {store}>
       <AppRouter />
     </Provider>
     )
     return (
       <div>
-       {jsx}
-      </div>
+        {jsx}
+       </div>
     
     );
   }
