@@ -5,31 +5,40 @@ import { editExpense, removeExpense } from '../Actions/expenses'
 
 const EditExpensepage = (props) => {
   return (
-      <div>
+    <div>
+    <div className="page-header">
+    <div className="content-container">
+          <h1 className="page-header__title">Edit Expense</h1>
+          </div>
+      </div>
+      <div className="content-container">
       <ExpenseForm
         expense = {props.expense}
         onSubmit={(expense) => {
-          props.dispatch(editExpense(props.expense.id, expense))
+          props.dispatch(editExpense(props.expense.id, expense));
           props.history.push('/')
         }}
       />
-      <button
+        <button
+        className="button button--secondary" 
         onClick={() => {
          props.dispatch(removeExpense({id: props.expense.id}))
-          props.history.push('/')
+         props.history.push('/')
         }}
-    >
-       Remove Expense
-    </button>
-      </div>
+      >
+        Remove Expense
+        </button>
+        </div>
+    </div>
   )
 }
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = (state,props) => {
   return {
-    expense: state.expenses.find((expense) =>  expense.id === props.match.params.id
-     )
-   }
+    expense: state.expenses.find((expense) => expense.id === props.match.params.id
+      
+    )
+  } 
 }
 
-export default connect(mapStateToProps) (EditExpensepage)
+export default connect(mapStateToProps)(EditExpensepage)
