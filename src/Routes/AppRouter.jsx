@@ -15,7 +15,7 @@ const AppRouter = () => {
         <Route exact path="/" component ={ExpenseDashboardpage } />
         <Route  path="/Edit/:id" component ={EditExpensepage} />
           <Route path="/Add" component={AddExpensepage} />
-          <Route path ="/Expense" component = {ExpensesSummary} />
+          
         <Route   component ={NotFoundPage }/>
         </Switch>
         </div>
