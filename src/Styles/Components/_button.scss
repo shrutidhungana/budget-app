@@ -8,6 +8,11 @@
     line-height: 1;
     padding: $s-size;
     text-decoration: none;
+    width: 150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
   }
   
   .button--link {
