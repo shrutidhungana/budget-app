@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 import AddExpensepage from '../Components/AddExpensepage'
 import EditExpensepage from '../Components/EditExpensepage'
 import ExpenseDashboardpage from '../Components/ExpenseDashboardpage'
